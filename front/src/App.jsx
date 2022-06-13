@@ -7,7 +7,7 @@ import GestorVentas from './pages/GestorVentas';
 import TipoEquipo from './pages/TipoEquipo';
 import EstadoEquipo from './pages/EstadoEquipo';
 import Navegador from './pages/Navegador';
-
+import Inventario from './pages/Inventario';
 
 import Login from './pages/Login';
 import TotalVentas from './pages/TotalVentas';
@@ -30,6 +30,10 @@ function App() {
 
         <Route path ='/GestorVentas'> 
            <GestorVentas/>
+        </Route>
+
+        <Route path ='/Inventario'> 
+           <Inventario/>
         </Route>
 
         <Route path ='/TipoEquipo'> 

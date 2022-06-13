@@ -53,12 +53,18 @@ class GestorVentas extends React.Component {
     productoForm: {
       //Actuzalizar está parte con los campos que son
       _id: "",
-      title: "",
-      price: "",
-      url: "",
-      categoria: "",
-      disponible: "",
-      description: "",
+      serial: "",
+      modelo: "",
+      descripcion: "",
+      color: "",
+      foto: "",
+      precio: "",
+      usuario: "",
+      marca: "",
+      tipoEquipo: "",
+      estadoEquipo: "",
+      fechaCreacion: "",
+      tipoEquipo: "",
     },
     form: {
       ID_Producto: "",
@@ -141,7 +147,7 @@ class GestorVentas extends React.Component {
 
   listarProductos = async () => {
     try {
-      const resp = await fetch("http://localhost:3002/api/products", { method: "GET" })
+      const resp = await fetch("http://localhost:3030/inventario", { method: "GET" })
       const data = await resp.json()
       this.setState({ productList: data })
       console.log(data)
@@ -292,11 +298,11 @@ class GestorVentas extends React.Component {
         <ul>
           <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Ingresar Producto</Button>
           <> </>
-          <Button color="success" onClick={()=>this.mostrarModalInsertar2()}>Información Venta</Button>
+          <Button color="success" onClick={()=>this.mostrarModalInsertar2()}>Información Producto</Button>
           <> </>
-          <Link to='/TotalVentas'><Button color = "success" type='button' onClick={()=>this.guardar()} >Guardar Venta</Button></Link>
+          <Link to='/TotalVentas'><Button color = "success" type='button' onClick={()=>this.guardar()} >Guardar Producto</Button></Link>
           <> </>
-          <Link to='/TotalVentas'><Button color = "success" type='button' >Listado Ventas</Button></Link>
+          <Link to='/TotalVentas'><Button color = "success" type='button' >Inventario</Button></Link>
 
           </ul>
           <br />
