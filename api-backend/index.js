@@ -6,7 +6,8 @@ const { getConnection } = require('./db/db-connection-mongo');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3030
+console.log({port})
 
 getConnection();
 
@@ -25,7 +26,7 @@ app.use('/inventario',require('./router/inventario'));
 
 
 app.listen(port, () => {
-  console.log('conexion exitosa en puerto ${port}');
+  console.log('conexion exitosa en puerto',port);
 });
 
 
