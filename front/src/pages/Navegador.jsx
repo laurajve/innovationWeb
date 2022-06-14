@@ -17,9 +17,7 @@ function navegador(){
             </Link>
             <Link to='/EstadoEquipo'>
                 <button type='button' className="bot1">Estado Equipo</button>
-            </Link>
-            <Link to='/Inventario'>
-                <button type='button' className="bot2">Inventario</button>
+           
             </Link>
             <Link to='/GestorUsuarios'>
                 <button type='button' className="bot3">Usuarios</button>
